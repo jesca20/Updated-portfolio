@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Gorditas&family=Poppins:wght@400;600&family=Preahvihear&family=Shadows+Into+Light&family=Style+Script&display=swap');
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px){
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
   * {
     margin: 0;
     padding: 0;
@@ -101,8 +99,8 @@
     text-decoration: none;
     text-align: center;
     border: 1px solid;
-    border-radius: 15px;
-    padding: 2%;
+    border-radius: 8px;
+    padding: 3%;
     box-sizing: content-box;
     box-shadow: -8px 4px 19px 4px #00000018;
     transition: 50ms ease-in-out;
@@ -151,7 +149,6 @@
   .right {
     margin-left: 40%;
     align-self: center;
-    z-index: 2;
     position: absolute;
   }
 
@@ -162,35 +159,38 @@
     border: solid 3px rgb(209, 192, 192);
     box-shadow: 8px 4px 19px 0px rgb(209, 192, 192);
     transition: 50ms ease-in-out;
-    overflow: hidden;
-    font-family: Inconsolata;
-    z-index: 2;
-  }
-
-  p {
-    margin: 0;
-    font-size: 1.5rem;
-    margin-right: 20px;
-    color: gray;
-    opacity: 1;
-    font-family: 'Shadows into light';
-    font-weight: bold;
-    z-index: 2;
+    font-family: 'Inconsolata';
   }
 
   .content1,
   .content2,
   .content3 {
     display: flex;
+    flex-direction: row;
+    justify-content: left;
   }
 
-  .content1 h2::before,
-  .content2 h2::before,
-  .content3 h2::before {
-    content: "< ";
+  .content1 h2::before {
+    content: "01 < ";
     color: gray;
     font-weight: 900;
+    font-family: 'inconsolata';
   }
+
+  .content2 h2::before {
+    content: "02 < ";
+    color: gray;
+    font-weight: 900;
+    font-family: 'inconsolata';
+  }
+
+  .content3 h2::before {
+    content: "03 < ";
+    color: gray;
+    font-weight: 900;
+    font-family: 'inconsolata';
+  }
+
 
   .content1 h2::after,
   .content2 h2::after,
@@ -198,6 +198,7 @@
     content: " >";
     color: gray;
     font-weight: 900;
+    font-family: 'inconsolata';
   }
 
   span {
@@ -216,7 +217,6 @@
     white-space: nowrap;
     display: inline-block;
     overflow: hidden;
-    white-space: nowrap;
     animation: typing 4s forwards;
   }
 
@@ -254,6 +254,7 @@
 
   .resumeinfo button::before {
     content: '+  ';
+    font-family: 'Gorditas';
   }
 
   .resumeinfo button {
@@ -264,19 +265,26 @@
     border-radius: 20px;
     padding: 15px;
     font-size: 1.15rem;
-    font-family: Gorditas sans-serif;
     cursor: pointer;
     margin: 5% 0;
   }
 
+  .pro-content { 
+    display: flex;
+    flex-wrap: nowrap ;
+  }
+
+  .OOP ul li{
+    list-style: none;
+  }
   #bio-content,
   #edu-content,
   #work-content,
-  #pro-content {
+  #pro-content{
     color: #fff;
     overflow: hidden;
     max-height: 0;
-    font-family: poppins;
+    font-family: 'poppins';
   }
 
   #bio-content.open,
@@ -292,8 +300,8 @@
   }
 }
 
-@media (max-width: 480px)
-  {
+
+@media (max-width: 480px) {
   * {
     margin: 0;
     padding: 0;
@@ -449,6 +457,7 @@
   }
 
   .intro {
+    margin: 0;
     border-radius: 20px;
     padding: 12px;
     background-color: #fff;
@@ -456,14 +465,13 @@
     box-shadow: 8px 4px 19px 0px rgb(209, 192, 192);
     transition: 50ms ease-in-out;
     overflow: hidden;
-    font-family: Inconsolata;
+    font-family: 'Inconsolata';
     z-index: 2;
   }
 
   p {
-    margin: 0;
+    margin: 0px;
     font-size: 1rem;
-    margin-right: 20px;
     color: gray;
     opacity: 1;
     font-family: 'Shadows into light';
@@ -475,6 +483,7 @@
   .content2,
   .content3 {
     display: flex;
+    align-items: center;
   }
 
   .content1 h2::before,
@@ -506,12 +515,12 @@
   .content3 h2 {
     opacity: 0;
     overflow: hidden;
-    white-space: nowrap;
     display: inline-block;
     animation: typing 4s forwards;
     font-size: 1rem;
     width: auto;
     color: black;
+    text-align: left;
   }
 
   .content3 i {
@@ -536,6 +545,7 @@
       opacity: 1;
     }
   }
+
   .resumeinfo {
     z-index: 2;
     display: flex;
@@ -571,6 +581,7 @@
     max-height: 0;
     font-family: poppins;
   }
+
   #pro-button {
     display: none;
   }
@@ -578,7 +589,7 @@
   #bio-content.open,
   #edu-content.open,
   #work-content.open,
-  #pro-content.open{
+  #pro-content.open {
     max-height: 80px;
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
